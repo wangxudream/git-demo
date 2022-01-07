@@ -31,4 +31,9 @@ git fetch origin tag 'tag_name'
 git push origin -d tag 'v0.0.1' #删除远程仓库中的tag
 git ls-remote --tags branch_name # 查看远端分支tag
 ```
+### 三、分支的使用
+```shell
+git push origin branch_name # 将分支推送至远程仓库
+git push origin -d branch_name # 删除远程仓库分支
+```
   
