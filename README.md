@@ -35,5 +35,6 @@ git ls-remote --tags origin # 查看远端分支tag
 ```shell
 git push origin branch_name # 将分支推送至远程仓库
 git push origin -d branch_name # 删除远程仓库分支
+git branch -vv #查看分支的追踪关系
 ```
   
