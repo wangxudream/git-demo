@@ -22,4 +22,9 @@
     #将内容推送至远端仓库 
     git push -u origin master 
 ```
+### 二、标签的使用
+```shell
+git tag -a 'v0.0.1' -m 'first tag' #本地创建标签
+git push origin master --tags 'v0.0.1' # 将本地标签推送至远程仓库
+```
   
