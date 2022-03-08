@@ -25,6 +25,7 @@
 ### 二、标签的使用
 ```shell
 git tag -a 'v0.0.1' -m 'first tag' #本地创建标签
+git push origin tag_name #本地标签推送至远端
 git push origin remote_branch_name --tags 'v0.0.1' # 将本地标签推送至远程仓库
 git pull #可以获取本地没有的标签
 git fetch origin tag 'tag_name'
