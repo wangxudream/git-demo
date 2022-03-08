@@ -22,17 +22,21 @@
     #将内容推送至远端仓库 
     git push -u origin master 
 ```
+
 ### 二、标签的使用
+
 ```shell
 git tag -a 'v0.0.1' -m 'first tag' #本地创建标签
 git push origin tag_name #本地标签推送至远端
-git push origin remote_branch_name --tags 'v0.0.1' # 将本地标签推送至远程仓库
+git push origin --tags  # 将本地标签推送至远程仓库
 git pull #可以获取本地没有的标签
 git fetch origin tag 'tag_name'
 git push origin -d tag 'v0.0.1' #删除远程仓库中的tag
 git ls-remote --tags origin # 查看远端分支tag
 ```
+
 ### 三、分支的使用
+
 ```shell
 git push origin branch_name # 将分支推送至远程仓库
 git push origin -d branch_name # 删除远程仓库分支
