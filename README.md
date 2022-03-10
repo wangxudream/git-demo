@@ -23,6 +23,13 @@
     git push -u origin master 
 ```
 
+```text
+origin是默认的远端仓库的名称
+clone时可以自定义远程仓库的名称
+git clone -o {name} http 
+
+```
+
 ### 二、标签的使用
 
 ```shell
