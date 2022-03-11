@@ -50,6 +50,7 @@ git branch -r #查看远端分支
 git branch -a #查看所有分支
 git branch {branch_name} #创建分支
 git branch -d {branch_name} #删除分支
+git branch -m {old_branch_name} {new_branch_name} #调整分支名称
 git push origin {branch_name} # 将分支推送至远程仓库
 git push origin -d {branch_name} # 删除远程仓库分支
 git branch -vv #查看分支的追踪关系
@@ -64,6 +65,15 @@ merge
   merge 操作会生成新的commit点[Merge branch 'feature/rebase']
 rebase
   rebase 操作会直接合并进去
-  log操作看起来是一条直线
+  log 操作看起来是一条直线
 ```
+
 ### 五、pull fetch
+
+```text
+git pull = git fetch + git merge
+使用
+1、git fetch {远程仓库名} {分支名}
+2、git log -p FETCH_HEAD
+从远端仓库取回更新后，会返回FETCH_HEAD，指的是某个branch在服务器上的最新状态，我们可以在本地通过它查看刚取回的更新信息
+```
