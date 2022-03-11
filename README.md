@@ -49,4 +49,12 @@ git push origin branch_name # 将分支推送至远程仓库
 git push origin -d branch_name # 删除远程仓库分支
 git branch -vv #查看分支的追踪关系
 ```
-  
+### 四、merge rebase
+![img_1.png](img_1.png)
+```text
+merge
+  merge 操作会生成新的commit点[Merge branch 'feature/rebase']
+rebase
+  rebase 操作会直接合并进去
+  log操作看起来是一条直线
+```
