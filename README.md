@@ -9,20 +9,25 @@ CVCS 中央版本控制
 DVCS 分布式版本控制
   每个客户端都保存有完整的镜像
 ```
-CVS  中央版本控制
+
+CVS 中央版本控制
 ![CVS](img_2.png)
 DCVS 分布式版本控制
 ![DCVS](img_3.png)
-### Git
+
+### Git介绍
+
 ```text
 Git处理数据的方式像一个快照流
 Git近乎所有的操作都是本地完成
 Git保证完整性
   通过SHA-1 散列
 ```
+
 Git版本控制
 ![Git版本控制](img_4.png)
 Git仓库
+
 ```text
 Git 有三种状态
   已提交(committed)、已修改(modified)和已暂存(staged)
@@ -30,9 +35,29 @@ Git 有三种状态
   已修改表示修改了文件，但还没保存到数据库中。 
   已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。
 ```
-![Git仓库](img_5.png)
-### 一、将本地项目推送至仓库
 
+![Git仓库](img_5.png)
+
+### Git使用
+
+#### config
+
+```text
+git的配置文件存储在三个不同的位置
+/etc/gitconfig       #包含系统上每一个用户及他们仓库的通用配置 --system
+~/.gitconfig
+~/.config/git/config #只针对当前用户  --global
+当前项目.git/config    #针对该仓库
+```
+
+```text
+git config user.name {user_name}
+git config --global user.name  {user_name} #设置当前用户姓名
+git config --global user.email {user_email}
+git config --global --get user.name
+```
+
+### 一、将本地项目推送至仓库
 > 1、本地获取ssh key  
 > 2、将ssh key配置至github  
 > 3、github上创建仓库获取  [git@github.com:wangxudream/git-demo.git]  
