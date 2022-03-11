@@ -1,5 +1,36 @@
-## 这是一个测试git使用的项目
+## Git笔记
 
+### VCS CVCS DVCS
+
+```text
+VCS版本控制
+CVCS 中央版本控制
+  中央服务器的单点故障
+DVCS 分布式版本控制
+  每个客户端都保存有完整的镜像
+```
+CVS  中央版本控制
+![CVS](img_2.png)
+DCVS 分布式版本控制
+![DCVS](img_3.png)
+### Git
+```text
+Git处理数据的方式像一个快照流
+Git近乎所有的操作都是本地完成
+Git保证完整性
+  通过SHA-1 散列
+```
+Git版本控制
+![Git版本控制](img_4.png)
+Git仓库
+```text
+Git 有三种状态
+  已提交(committed)、已修改(modified)和已暂存(staged)
+  已提交表示数据已经安全的保存在本地数据库中。 
+  已修改表示修改了文件，但还没保存到数据库中。 
+  已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。
+```
+![Git仓库](img_5.png)
 ### 一、将本地项目推送至仓库
 
 > 1、本地获取ssh key  
@@ -30,7 +61,7 @@ git clone -o {name} http
 
 ```
 
-### 二、标签的使用
+### 二、标签的使用[tag]
 
 ```shell
 git tag -a 'v0.0.1' -m 'first tag' #本地创建标签
@@ -42,7 +73,7 @@ git push origin -d tag 'v0.0.1' #删除远程仓库中的tag
 git ls-remote --tags origin # 查看远端分支tag
 ```
 
-### 三、分支的使用
+### 三、分支的使用[branch]
 
 ```shell
 git branch #查看本地分支
@@ -54,6 +85,13 @@ git branch -m {old_branch_name} {new_branch_name} #调整分支名称
 git push origin {branch_name} # 将分支推送至远程仓库
 git push origin -d {branch_name} # 删除远程仓库分支
 git branch -vv #查看分支的追踪关系
+```
+
+### 四、日志[log]
+
+```text
+git log  #显示提交日志信息
+git show #查看日志 能查看具体变更
 ```
 
 ### 四、merge rebase
@@ -75,5 +113,8 @@ git pull = git fetch + git merge
 使用
 1、git fetch {远程仓库名} {分支名}
 2、git log -p FETCH_HEAD
-从远端仓库取回更新后，会返回FETCH_HEAD，指的是某个branch在服务器上的最新状态，我们可以在本地通过它查看刚取回的更新信息
+3、git merge FETCH_HEAD
+从远端仓库取回更新后，会返回FETCH_HEAD，指的是某个branch在服务器上的最新状态，
+我们可以在本地通过它查看刚取回的更新信息
 ```
+
