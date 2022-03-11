@@ -45,12 +45,20 @@ git ls-remote --tags origin # 查看远端分支tag
 ### 三、分支的使用
 
 ```shell
-git push origin branch_name # 将分支推送至远程仓库
-git push origin -d branch_name # 删除远程仓库分支
+git branch #查看本地分支
+git branch -r #查看远端分支
+git branch -a #查看所有分支
+git branch {branch_name} #创建分支
+git branch -d {branch_name} #删除分支
+git push origin {branch_name} # 将分支推送至远程仓库
+git push origin -d {branch_name} # 删除远程仓库分支
 git branch -vv #查看分支的追踪关系
 ```
+
 ### 四、merge rebase
+
 ![img_1.png](img_1.png)
+
 ```text
 merge
   merge 操作会生成新的commit点[Merge branch 'feature/rebase']
@@ -58,3 +66,4 @@ rebase
   rebase 操作会直接合并进去
   log操作看起来是一条直线
 ```
+### 五、pull fetch
