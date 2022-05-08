@@ -69,7 +69,7 @@ git config --global --get user.name
     #生成ssh key 将公钥复制到github上 C盘 .ssh 文件夹内
     ssh-keygen -t rsa -C "youremail@example.com"
     #本地创建仓库和分支 commit
-    git innit 
+    git init 
     git branch -m master
     git add .
     git commit -m 'first commit' 
