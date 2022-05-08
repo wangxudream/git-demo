@@ -57,7 +57,8 @@ git config --global user.email {user_email}
 git config --global --get user.name
 ```
 
-### 一、将本地项目推送至仓库
+#### 一、将本地项目推送至仓库
+
 > 1、本地获取ssh key  
 > 2、将ssh key配置至github  
 > 3、github上创建仓库获取  [git@github.com:wangxudream/git-demo.git]  
@@ -86,7 +87,7 @@ git clone -o {name} http
 
 ```
 
-### 二、标签的使用[tag]
+#### 二、标签的使用[tag]
 
 ```shell
 git tag -a 'v0.0.1' -m 'first tag' #本地创建标签
@@ -95,10 +96,11 @@ git push origin --tags  # 将本地所有标签推送至远程仓库
 git pull #可以获取本地没有的标签
 git fetch origin tag {tag_name}
 git push origin -d tag 'v0.0.1' #删除远程仓库中的tag
+git push origin :{tag_name} #删除远程仓库中的tag
 git ls-remote --tags origin # 查看远端分支tag
 ```
 
-### 三、分支的使用[branch]
+#### 三、分支的使用[branch]
 
 ```shell
 git branch #查看本地分支
@@ -112,14 +114,14 @@ git push origin -d {branch_name} # 删除远程仓库分支
 git branch -vv #查看分支的追踪关系
 ```
 
-### 四、日志[log]
+#### 四、日志[log]
 
 ```text
 git log  #显示提交日志信息
 git show #查看日志 能查看具体变更
 ```
 
-### 四、merge rebase
+#### 四、merge rebase
 
 ![img_1.png](img_1.png)
 
@@ -131,7 +133,7 @@ rebase
   log 操作看起来是一条直线
 ```
 
-### 五、pull fetch
+#### 五、pull fetch
 
 ```text
 git pull = git fetch + git merge
