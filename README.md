@@ -121,7 +121,7 @@ git log  #显示提交日志信息
 git show #查看日志 能查看具体变更
 ```
 
-#### 四、merge rebase
+#### 五、merge rebase
 
 ![img_1.png](img_1.png)
 
@@ -133,7 +133,7 @@ rebase
   log 操作看起来是一条直线
 ```
 
-#### 五、pull fetch
+#### 六、pull fetch
 
 ```text
 git pull = git fetch + git merge
@@ -145,3 +145,15 @@ git pull = git fetch + git merge
 我们可以在本地通过它查看刚取回的更新信息
 ```
 
+#### 七、stash
+
+```text
+git stash save '描述信息'
+git stash list  #查看暂存列表
+git stash apply #使用最近的一个暂存
+git stash apply {index} #应用某个暂存信息
+git stash pop #应用并删除最近的暂存信息
+git stash pop {index} #应用并删除某个暂存信息
+git stash clear #删除所有暂存
+git stash drop {index} #删除指定暂存
+```
