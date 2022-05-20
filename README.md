@@ -157,3 +157,10 @@ git stash pop {index} #应用并删除某个暂存信息
 git stash clear #删除所有暂存
 git stash drop {index} #删除指定暂存
 ```
+#### 八、reset
+```text
+git reset --soft {commit_id} 
+回退commit_id之后记录至暂存区
+git reset --hard {commit_id}
+回退至commit_id
+```
